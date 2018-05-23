@@ -30,8 +30,8 @@
         {
             this.btCancelar = new System.Windows.Forms.Button();
             this.btSalvar = new System.Windows.Forms.Button();
-            this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbCpf = new System.Windows.Forms.TextBox();
+            this.tbTamanho = new System.Windows.Forms.TextBox();
+            this.tbValor = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.tbId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.btCancelar.TabIndex = 19;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btSalvar
             // 
@@ -59,22 +60,23 @@
             this.btSalvar.TabIndex = 18;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.UseVisualStyleBackColor = true;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
-            // tbEmail
+            // tbTamanho
             // 
-            this.tbEmail.Location = new System.Drawing.Point(75, 145);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(526, 20);
-            this.tbEmail.TabIndex = 17;
+            this.tbTamanho.Location = new System.Drawing.Point(75, 145);
+            this.tbTamanho.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTamanho.Name = "tbTamanho";
+            this.tbTamanho.Size = new System.Drawing.Size(526, 20);
+            this.tbTamanho.TabIndex = 17;
             // 
-            // tbCpf
+            // tbValor
             // 
-            this.tbCpf.Location = new System.Drawing.Point(73, 104);
-            this.tbCpf.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCpf.Name = "tbCpf";
-            this.tbCpf.Size = new System.Drawing.Size(150, 20);
-            this.tbCpf.TabIndex = 16;
+            this.tbValor.Location = new System.Drawing.Point(73, 104);
+            this.tbValor.Margin = new System.Windows.Forms.Padding(2);
+            this.tbValor.Name = "tbValor";
+            this.tbValor.Size = new System.Drawing.Size(150, 20);
+            this.tbValor.TabIndex = 16;
             // 
             // tbNome
             // 
@@ -140,8 +142,8 @@
             this.ClientSize = new System.Drawing.Size(652, 304);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btSalvar);
-            this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.tbCpf);
+            this.Controls.Add(this.tbTamanho);
+            this.Controls.Add(this.tbValor);
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.label4);
@@ -150,6 +152,8 @@
             this.Controls.Add(this.label1);
             this.Name = "ManterBebidas";
             this.Text = "ManterBebidas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.ManterBebidas_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,8 +163,8 @@
 
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btSalvar;
-        private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.TextBox tbCpf;
+        private System.Windows.Forms.TextBox tbTamanho;
+        private System.Windows.Forms.TextBox tbValor;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label4;
