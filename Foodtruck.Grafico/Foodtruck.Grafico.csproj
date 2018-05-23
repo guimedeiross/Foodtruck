@@ -64,6 +64,7 @@
     <Compile Include="ManterCliente.Designer.cs">
       <DependentUpon>ManterCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManterLanche.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManterLanche.Designer.cs">
