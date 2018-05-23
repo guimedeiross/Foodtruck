@@ -24,7 +24,8 @@ namespace Foodtruck.Grafico
         private void btSalvar_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
-            if(Int64.TryParse(tbId.Text, out long value))
+            long value = 0;
+            if (Int64.TryParse(tbId.Text , out value))
             {
                 cliente.Id = value;
             }

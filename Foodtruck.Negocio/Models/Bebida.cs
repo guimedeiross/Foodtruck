@@ -12,7 +12,7 @@ namespace Foodtruck.Negocio.Models
         public float Tamanho { get; set; }
 
         [ForeignKey("Bebidas")]
-        public virtual ICollection<Pedido> Pedidos { get; set; }
+        public override ICollection<Pedido> Pedidos { get; set; }
 
 
         public override String Descrever()
