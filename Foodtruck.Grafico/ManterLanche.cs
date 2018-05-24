@@ -80,17 +80,12 @@ namespace Foodtruck.Grafico
 
         private void ManterLanche_Shown(object sender, EventArgs e)
         {
-            if (LancheSelecionado != null)
+            if(LancheSelecionado !=null)
             {
                 this.tbId.Text = LancheSelecionado.Id.ToString();
                 this.tbNome.Text = LancheSelecionado.Nome;
                 this.tbValor.Text = LancheSelecionado.Valor.ToString();
             }
-        }
-
-        private void ManterLanche_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
