@@ -18,7 +18,7 @@ namespace Foodtruck.Grafico
             InitializeComponent();
         }
 
-        private void AbreTelaInclusaoAlteracao(Cliente clienteSelecionado)
+        private void AbreTelaInclusaoAlteracaoCliente(Cliente clienteSelecionado)
         {
             ManterCliente tela = new ManterCliente();
             tela.MdiParent = this.MdiParent;
@@ -29,7 +29,7 @@ namespace Foodtruck.Grafico
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
-            AbreTelaInclusaoAlteracao(null);
+            AbreTelaInclusaoAlteracaoCliente(null);
         }
 
         private void Tela_FormClosed(object sender, FormClosedEventArgs e)
@@ -89,7 +89,7 @@ namespace Foodtruck.Grafico
             if (VerificarSelecao())
             {
                 Cliente clienteSelecionado = (Cliente)dgClientes.SelectedRows[0].DataBoundItem;
-                AbreTelaInclusaoAlteracao(clienteSelecionado);
+                AbreTelaInclusaoAlteracaoCliente(clienteSelecionado);
             }
         }
     }

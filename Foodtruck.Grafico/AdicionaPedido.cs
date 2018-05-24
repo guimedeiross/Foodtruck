@@ -93,7 +93,7 @@ namespace Foodtruck.Grafico
                     }
                     MessageBox.Show(msg, "Erro");
                 }
-            }catch(Exception ex)
+            }catch(Exception)
             {
                 MessageBox.Show("Ocorreu um erro grave, fale com o administrador");
             }

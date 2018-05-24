@@ -81,7 +81,6 @@
             this.tbValor.Name = "tbValor";
             this.tbValor.Size = new System.Drawing.Size(118, 20);
             this.tbValor.TabIndex = 11;
-            this.tbValor.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbValor
             // 
@@ -103,6 +102,7 @@
             this.btCancelar.TabIndex = 13;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click_1);
             // 
             // btSalvar
             // 
@@ -113,6 +113,7 @@
             this.btSalvar.TabIndex = 12;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.UseVisualStyleBackColor = true;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // ManterLanche
             // 
@@ -129,6 +130,7 @@
             this.Controls.Add(this.lbID);
             this.Name = "ManterLanche";
             this.Text = "ManterLanche";
+            this.Load += new System.EventHandler(this.ManterLanche_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
