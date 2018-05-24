@@ -15,6 +15,7 @@ namespace Foodtruck.Grafico
     public partial class AdicionaPedido : Form
     {
         Pedido pedido = new Pedido();
+        public Pedido PedidoSelecionado { get; set; }
 
         public AdicionaPedido()
         {
@@ -48,7 +49,7 @@ namespace Foodtruck.Grafico
             cbBebidas.DataSource = Program.Gerenciador.TodasAsBebidas();
         }
 
-        private void CarregaDatagrids()
+        public void CarregaDatagrids()
         {
             dgBebidas.AutoGenerateColumns = false;
             dgBebidas.DataSource = pedido.Bebidas.ToList();
@@ -98,6 +99,15 @@ namespace Foodtruck.Grafico
                 MessageBox.Show("Ocorreu um erro grave, fale com o administrador");
             }
             
+        }
+
+        private void AdicionaPedido_Shown(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
