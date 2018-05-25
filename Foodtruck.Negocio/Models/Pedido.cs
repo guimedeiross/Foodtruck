@@ -31,6 +31,15 @@ namespace Foodtruck.Negocio.Models
             Decimal totalBebidas = this.Bebidas.Sum(m => m.Valor);
             return totalLanches + totalBebidas;
         }
+
+        [NotMapped]
+        public String NomeCliente
+        {
+            get
+            {
+                return this.Cliente.Nome;
+            }
+        }
         
     }
 }

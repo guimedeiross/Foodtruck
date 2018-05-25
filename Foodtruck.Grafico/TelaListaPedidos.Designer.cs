@@ -92,7 +92,7 @@
             // 
             // Cliente
             // 
-            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.DataPropertyName = "NomeCliente";
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
