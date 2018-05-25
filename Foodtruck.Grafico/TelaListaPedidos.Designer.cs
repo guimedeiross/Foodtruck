@@ -34,7 +34,6 @@
             this.dgPedidos = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgPedidos)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +77,6 @@
             this.dgPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Cliente,
-            this.ValorTotal,
             this.DataCompra});
             this.dgPedidos.Location = new System.Drawing.Point(12, 50);
             this.dgPedidos.Name = "dgPedidos";
@@ -98,13 +96,6 @@
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
-            // 
-            // ValorTotal
-            // 
-            this.ValorTotal.DataPropertyName = "ValorTotal";
-            this.ValorTotal.HeaderText = "Valor";
-            this.ValorTotal.Name = "ValorTotal";
-            this.ValorTotal.ReadOnly = true;
             // 
             // DataCompra
             // 
@@ -138,7 +129,6 @@
         private System.Windows.Forms.DataGridView dgPedidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataCompra;
     }
 }

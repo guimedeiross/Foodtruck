@@ -130,6 +130,7 @@ namespace Foodtruck.Grafico
                 if (validacao.Valido)
                 {
                     MessageBox.Show("Pedido cadastrado com sucesso!");
+                    this.Close();
                 }
                 else
                 {
