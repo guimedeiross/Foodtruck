@@ -29,8 +29,7 @@ namespace Foodtruck.Negocio.Models
         {
             Decimal totalLanches = this.Lanches.Sum(m => m.Valor);
             Decimal totalBebidas = this.Bebidas.Sum(m => m.Valor);
-            Decimal totalLancheBebidas = totalLanches + totalBebidas;
-            return totalLancheBebidas;
+            return totalLanches + totalBebidas;
         }
         
     }

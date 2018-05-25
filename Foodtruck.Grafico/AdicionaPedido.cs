@@ -15,7 +15,6 @@ namespace Foodtruck.Grafico
     public partial class AdicionaPedido : Form
     {
         Pedido pedido = new Pedido();
-        public Pedido PedidoSelecionado { get; set; }
 
         public AdicionaPedido()
         {
@@ -31,15 +30,7 @@ namespace Foodtruck.Grafico
 
         private void CarregaTotal()
         {
-            if(PedidoSelecionado != null)
-            {
-                lbTotal.Text = PedidoSelecionado.ValorTotal().ToString();
-            }
-            else
-            {
-                lbTotal.Text = pedido.ValorTotal().ToString();
-            }
-            
+            lbTotal.Text = pedido.ValorTotal().ToString();
         }
 
         private void CarregaComboBoxes()
@@ -59,55 +50,26 @@ namespace Foodtruck.Grafico
 
         private void CarregaDatagrids()
         {
-            if(PedidoSelecionado != null)
-            {
-                dgBebidas.AutoGenerateColumns = false;
-                dgBebidas.DataSource = PedidoSelecionado.Bebidas.ToList();
-
-                dgLanches.AutoGenerateColumns = false;
-                dgLanches.DataSource = PedidoSelecionado.Lanches.ToList();
-            }
-            else
-            {
-                dgBebidas.AutoGenerateColumns = false;
-                dgBebidas.DataSource = pedido.Bebidas.ToList();
-
-                dgLanches.AutoGenerateColumns = false;
-                dgLanches.DataSource = pedido.Lanches.ToList();
-            }
-
+            dgBebidas.AutoGenerateColumns = false;
+            dgBebidas.DataSource = pedido.Bebidas.ToList();
+            
+            dgLanches.AutoGenerateColumns = false;
+            dgLanches.DataSource = pedido.Lanches.ToList();
 
             CarregaTotal();
         }
 
         private void btAdicionaBebida_Click(object sender, EventArgs e)
         {
-            if(PedidoSelecionado != null)
-            {
-                Bebida bebidaSelecionadas = (Bebida)cbBebidas.SelectedItem;
-                PedidoSelecionado.Bebidas.Add(bebidaSelecionadas);
-            }
-            else
-            {
-                Bebida bebidaSelecionada = (Bebida)cbBebidas.SelectedItem;
-                pedido.Bebidas.Add(bebidaSelecionada);
-            }
+            Bebida bebidaSelecionada = (Bebida)cbBebidas.SelectedItem;
+            pedido.Bebidas.Add(bebidaSelecionada);
             CarregaDatagrids();
         }
 
         private void btAdicionaLanche_Click(object sender, EventArgs e)
         {
-            if(PedidoSelecionado != null)
-            {
-                Lanche lancheSelecionados = cbLanches.SelectedItem as Lanche;
-                PedidoSelecionado.Lanches.Add(lancheSelecionados);
-            }
-            else
-            {
-                Lanche lancheSelecionado = cbLanches.SelectedItem as Lanche;
-                pedido.Lanches.Add(lancheSelecionado);
-            }
-            
+            Lanche lancheSelecionado = cbLanches.SelectedItem as Lanche;
+            pedido.Lanches.Add(lancheSelecionado);
             CarregaDatagrids();
         }
 
@@ -117,20 +79,10 @@ namespace Foodtruck.Grafico
             {
                 pedido.Cliente = cbClientes.SelectedItem as Cliente;
                 pedido.DataCompra = DateTime.Now;
-                Validacao validacao;
-                if (PedidoSelecionado != null)
-                {
-                     validacao = Program.Gerenciador.AlterarPedido(PedidoSelecionado);
-                }
-                else
-                {
-                    validacao = Program.Gerenciador.CadastraPedido(pedido);
-                }
-                
+                Validacao validacao = Program.Gerenciador.CadastraPedido(pedido);
                 if (validacao.Valido)
                 {
                     MessageBox.Show("Pedido cadastrado com sucesso!");
-                    this.Close();
                 }
                 else
                 {
@@ -141,20 +93,11 @@ namespace Foodtruck.Grafico
                     }
                     MessageBox.Show(msg, "Erro");
                 }
-            }catch(Exception ex)
+            }catch(Exception)
             {
                 MessageBox.Show("Ocorreu um erro grave, fale com o administrador");
             }
             
-        }
-
-        private void AdicionaPedido_Shown(object sender, EventArgs e)
-        {
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
