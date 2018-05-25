@@ -79,7 +79,6 @@ namespace Foodtruck.Grafico
             AdicionaPedido addPedido = new AdicionaPedido();
             addPedido.PedidoSelecionado = pedidoSelecionado;
             addPedido.FormClosed += AddPedido_FormClosed;
-            addPedido.CarregaDatagrids();
             addPedido.Show();
         }
         private void btAlterar_Click(object sender, EventArgs e)
