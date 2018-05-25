@@ -34,6 +34,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lanchesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lanchesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bebidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -72,7 +73,8 @@
             this.clientesToolStripMenuItem,
             this.pedidosToolStripMenuItem,
             this.novoPedidoToolStripMenuItem,
-            this.lanchesToolStripMenuItem});
+            this.lanchesToolStripMenuItem,
+            this.bebidasToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -89,6 +91,7 @@
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
             this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pedidosToolStripMenuItem.Text = "Pedidos";
+            this.pedidosToolStripMenuItem.Click += new System.EventHandler(this.pedidosToolStripMenuItem_Click);
             // 
             // novoPedidoToolStripMenuItem
             // 
@@ -96,6 +99,13 @@
             this.novoPedidoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.novoPedidoToolStripMenuItem.Text = "Novo Pedido";
             this.novoPedidoToolStripMenuItem.Click += new System.EventHandler(this.novoPedidoToolStripMenuItem_Click);
+            // 
+            // lanchesToolStripMenuItem
+            // 
+            this.lanchesToolStripMenuItem.Name = "lanchesToolStripMenuItem";
+            this.lanchesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lanchesToolStripMenuItem.Text = "Lanches";
+            this.lanchesToolStripMenuItem.Click += new System.EventHandler(this.lanchesToolStripMenuItem_Click);
             // 
             // windowsMenu
             // 
@@ -191,12 +201,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // lanchesToolStripMenuItem
+            // bebidasToolStripMenuItem
             // 
-            this.lanchesToolStripMenuItem.Name = "lanchesToolStripMenuItem";
-            this.lanchesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lanchesToolStripMenuItem.Text = "Lanches";
-            this.lanchesToolStripMenuItem.Click += new System.EventHandler(this.lanchesToolStripMenuItem_Click);
+            this.bebidasToolStripMenuItem.Name = "bebidasToolStripMenuItem";
+            this.bebidasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bebidasToolStripMenuItem.Text = "Bebidas";
+            this.bebidasToolStripMenuItem.Click += new System.EventHandler(this.bebidasToolStripMenuItem_Click);
             // 
             // TelaPrincipal
             // 
@@ -243,6 +253,7 @@
         private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoPedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lanchesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bebidasToolStripMenuItem;
     }
 }
 

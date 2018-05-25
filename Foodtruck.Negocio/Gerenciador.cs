@@ -20,6 +20,22 @@ namespace Foodtruck.Negocio
             banco.SaveChanges();
             return validacao;
         }
+        public Validacao RemoverLanche(Lanche lanche)
+        {
+            Validacao validacao = new Validacao();
+            banco.Lanches.Remove(lanche);
+            banco.SaveChanges();
+            return validacao;
+        }
+        public Validacao AlterarLanche(Lanche lancheAlterado)
+        {
+            Validacao validacao = new Validacao();
+            Lanche lancheBanco = BuscaLanchePorId(lancheAlterado.Id);
+            lancheBanco.Nome = lancheAlterado.Nome;
+            lancheBanco.Valor = lancheAlterado.Valor;
+            this.banco.SaveChanges();
+            return validacao;
+        }
         public Validacao RemoverPedido(Pedido pedido)
         {
             Validacao validacao = new Validacao();
@@ -217,6 +233,10 @@ namespace Foodtruck.Negocio
         public Cliente BuscaClientePorId(long id)
         {
             return this.banco.Clientes.Where(c => c.Id == id).FirstOrDefault();
+        }
+        public Lanche BuscaLanchePorId(long id)
+        {
+            return this.banco.Lanches.Where(c => c.Id == id).FirstOrDefault();
         }
 
         public Bebida BuscaBebidaPorId(long id)
