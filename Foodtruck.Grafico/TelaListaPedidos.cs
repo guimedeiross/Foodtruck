@@ -14,6 +14,7 @@ namespace Foodtruck.Grafico
     public partial class TelaListaPedidos : Form
     {
         Pedido pedido = new Pedido();
+        public Pedido PedidoSelecionado { get; set; }
 
         public TelaListaPedidos()
         {
@@ -68,6 +69,7 @@ namespace Foodtruck.Grafico
                     }
                     CarregarPedidos();
                 }
+
             }
         }
         private void CarregarTotal()

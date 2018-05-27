@@ -37,9 +37,17 @@ namespace Foodtruck.Negocio.Models
         {
             get
             {
-                return this.Cliente.Nome;
+                return this.Cliente.Descricao;
             }
         }
-        
+        [NotMapped]
+        public Decimal VTotal
+        {
+            get
+            {
+                return this.ValorTotal();
+            }
+        }
+
     }
 }
