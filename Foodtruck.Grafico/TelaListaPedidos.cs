@@ -47,30 +47,6 @@ namespace Foodtruck.Grafico
 
         private void btRemover_Click(object sender, EventArgs e)
         {
-            if (dgPedidos.SelectedRows.Count <= 0)
-            {
-                MessageBox.Show("Selecione uma linha");
-                return;
-            }
-            else
-            {
-                DialogResult resultado = MessageBox.Show("Tem certeza?", "Quer remover?", MessageBoxButtons.OKCancel);
-                if (resultado == DialogResult.OK)
-                {
-                    Pedido pedidoSelecionado = (Pedido)dgPedidos.SelectedRows[0].DataBoundItem;
-                    var validacao = Program.Gerenciador.RemoverPedido(pedidoSelecionado);
-                    if (validacao.Valido)
-                    {
-                        MessageBox.Show("Pedido Removido com Sucesso");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ocorreu um problema ao remover o pedido");
-                    }
-                    CarregarPedidos();
-                }
-
-            }
         }
         private void CarregarTotal()
         {

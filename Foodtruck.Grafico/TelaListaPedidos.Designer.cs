@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btAlterar = new System.Windows.Forms.Button();
-            this.btRemover = new System.Windows.Forms.Button();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.dgPedidos = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +40,7 @@
             // 
             // btAlterar
             // 
-            this.btAlterar.Location = new System.Drawing.Point(184, 11);
+            this.btAlterar.Location = new System.Drawing.Point(118, 11);
             this.btAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(72, 34);
@@ -49,17 +48,6 @@
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
             this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
-            // 
-            // btRemover
-            // 
-            this.btRemover.Location = new System.Drawing.Point(97, 11);
-            this.btRemover.Margin = new System.Windows.Forms.Padding(2);
-            this.btRemover.Name = "btRemover";
-            this.btRemover.Size = new System.Drawing.Size(84, 34);
-            this.btRemover.TabIndex = 4;
-            this.btRemover.Text = "Remover";
-            this.btRemover.UseVisualStyleBackColor = true;
-            this.btRemover.Click += new System.EventHandler(this.btRemover_Click);
             // 
             // btAdicionar
             // 
@@ -120,7 +108,6 @@
             this.ClientSize = new System.Drawing.Size(726, 441);
             this.Controls.Add(this.dgPedidos);
             this.Controls.Add(this.btAlterar);
-            this.Controls.Add(this.btRemover);
             this.Controls.Add(this.btAdicionar);
             this.Name = "TelaListaPedidos";
             this.Text = "TelaListaPedidos";
@@ -133,7 +120,6 @@
         #endregion
 
         private System.Windows.Forms.Button btAlterar;
-        private System.Windows.Forms.Button btRemover;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.DataGridView dgPedidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
